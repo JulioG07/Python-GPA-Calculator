@@ -1,12 +1,15 @@
 # In this file, the generateClass() function serves the porpuse of generating 
 # the classes that the user is currrently enrolled in
-
 average = 0
 
 def generate_Classes():
+    #global methoud allows you to use variables in another files 
+    global average
+
+
     # Create an empty list to store class names
     class_array = []
-    total = 0
+
 
     # Get input for each class, up to a maximum of 8
     for i in range(1, 9):
@@ -16,17 +19,20 @@ def generate_Classes():
         if class_name.lower() == 'done':
             break
         
+        # Append allows you to display your array 
         class_array.append(class_name)
 
-    #Gets the array's leght
+    #Gets the array's lenght
     amountOfClasses = len(class_array)
 
-    # Print the list of classes
-    print("\nYou are currently enrolled in " , amountOfClasses , "classes which are:")
+    # Prints the list of classes
+    print("\nYou are currently enrolled in" , amountOfClasses , "classes:")
     print("")
-
+ 
+    
     for class_name in class_array:
         print(class_name)
+    
 
     print("\nEnter your grade for the respective classes that you are taking:")
     print("")
@@ -42,6 +48,8 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8) / 8
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
 
     elif amountOfClasses == 7:
         score1 = float(input(class_array[0] + ": "))
@@ -54,6 +62,9 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6 + score7) / 7
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
+
 
     elif amountOfClasses == 6:
         score1 = float(input(class_array[0] + ": "))
@@ -65,6 +76,9 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6) / 6
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
+
 
     elif amountOfClasses == 5:
         score1 = float(input(class_array[0] + ": "))
@@ -75,7 +89,8 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3 + score4 + score5) / 5
         print("\nOverall average: " , average)
-
+        print("")
+        print("*******************************************************")
 
     elif amountOfClasses == 4:
         score1 = float(input(class_array[0] + ": "))
@@ -85,6 +100,8 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3 + score4) / 4
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
 
     elif amountOfClasses == 3:
         score1 = float(input(class_array[0] + ": "))
@@ -93,6 +110,9 @@ def generate_Classes():
 
         average = float(score1 + score2 + score3) / 3
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
+
 
     elif amountOfClasses == 2:
         score1 = float(input(class_array[0] + ": "))
@@ -100,15 +120,24 @@ def generate_Classes():
 
         average = float(score1 + score2) / 2
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
 
     elif amountOfClasses == 1:
         score1 = float(input(class_array[0] + ": "))
 
         average = float(score1) / 1
         print("\nOverall average: " , average)
+        print("")
+        print("*******************************************************")
 
     else:
         print("\nError was found in the program")
+        print("")
+        print("*******************************************************")
 
+
+def returnAverage():
+    return average
 # Call the function to execute the process
 #generate_Classes()
