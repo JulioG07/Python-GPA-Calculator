@@ -5,6 +5,7 @@ average = 0
 def generate_Classes():
     #global methoud allows you to use variables in another files 
     global average
+    global newAverage 
 
 
     # Create an empty list to store class names
@@ -47,7 +48,8 @@ def generate_Classes():
         score8 = float(input(class_array[7] + ": "))
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8) / 8
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -61,7 +63,8 @@ def generate_Classes():
         score7 = float(input(class_array[6] + ": "))
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6 + score7) / 7
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -75,7 +78,8 @@ def generate_Classes():
         score6 = float(input(class_array[5] + ": "))
 
         average = float(score1 + score2 + score3 + score4 + score5 + score6) / 6
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -88,7 +92,8 @@ def generate_Classes():
         score5 = float(input(class_array[4] + ": "))
 
         average = float(score1 + score2 + score3 + score4 + score5) / 5
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -99,7 +104,8 @@ def generate_Classes():
         score4 = float(input(class_array[3] + ": "))
 
         average = float(score1 + score2 + score3 + score4) / 4
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -109,7 +115,8 @@ def generate_Classes():
         score3 = float(input(class_array[2] + ": "))
 
         average = float(score1 + score2 + score3) / 3
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -119,7 +126,8 @@ def generate_Classes():
         score2 = float(input(class_array[1] + ": "))
 
         average = float(score1 + score2) / 2
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -127,7 +135,8 @@ def generate_Classes():
         score1 = float(input(class_array[0] + ": "))
 
         average = float(score1) / 1
-        print("\nOverall average: " , average)
+        newAverage = round(average,2)
+        print("\nOverall average: " , newAverage)
         print("")
         print("*******************************************************")
 
@@ -138,6 +147,6 @@ def generate_Classes():
 
 
 def returnAverage():
-    return average
+    return newAverage
 # Call the function to execute the process
 #generate_Classes()

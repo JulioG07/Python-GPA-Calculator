@@ -6,7 +6,8 @@ def main():
     print("")
     print("Let's create your student porfolio!")
     print("")
-    userName = input("Enter first name: ")
+    userName = input("Enter your full name: ")
+    userSchool = input("Enter the school you go to: ")
     userGrade = input("Enter your grade level: ")
     print("")
     print("*******************************************************")
@@ -24,28 +25,28 @@ def main():
     generate_Classes() 
 
     print("Loading...")
-    print("**************************************************************************************")
+    print("*******************************************************")
     
     # Grabs average and conditions it to its respective GPA
     from gpa import gpaCalc
-    average = returnAverage()
-    gpaCalc(average)
+    newAverage = returnAverage()
+    gpaCalc(newAverage)
 
     #Ask user if they want to use the calculator again 
     userResponse = input( "\nTry again? [Y or N] ")
-    
-    if userResponse.lower == "Y":
-        userResponse = True
-    elif userResponse.lower == "n":
-        print("Program ends")
-    
+    print("")
 
-    while userResponse == True:
+    if userResponse.lower() == "y":
+        userResponse = True
+    elif userResponse.lower() == "n":
+        print("See you later", userName, "!")
+        return
+
+    while userResponse:
         generate_Classes()
-        average = returnAverage()
-        gpaCalc(average)
-    if userResponse == False:
-        print("See you later ",userName,"!")
+        newAverage = returnAverage()
+        gpaCalc(newAverage)
+        userResponse = input("\nTry again? [Y or N] ")
 
 main()
 
